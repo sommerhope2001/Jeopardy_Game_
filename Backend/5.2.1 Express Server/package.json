@@ -1,0 +1,24 @@
+{
+  "name": "5.2.1-express-server",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "cores": "^0.8.5",
+    "cors": "^2.8.6",
+    "docx-parser": "^0.2.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.2.0",
+    "officeparser": "^7.2.3",
+    "openai": "^6.45.0",
+    "pdf-parse": "^2.4.5"
+  }
+}

@@ -1,0 +1,84 @@
+body{
+    background-color: darkblue;
+   
+}
+h1{
+    background-color: blue;
+    color: yellow;
+    text-align: center;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.player--0, .player--1{
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    height: 500px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+}
+
+h2,h4,.score{
+    text-align: center;
+    color:yellow;
+}
+
+.Gameboard{
+    border-radius: 20px;
+    background-color:black;
+    width: 525px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+   
+
+}
+.topic {
+      height: 75px;
+      width: 75px;
+      background-color: blue;
+    }
+
+.twoH {
+      height: 75px;
+      width: 75px;
+      background-color: blue;
+    }
+
+.fourH {
+      height: 75px;
+      width: 75px;
+      background-color: blue;
+    }
+
+.sixH {
+      height: 75px;
+      width: 75px;
+      background-color: blue;
+    }
+
+.eightH {
+      height: 75px;
+      width: 75px;
+      background-color: blue;
+    }
+
+.thou {
+      height: 75px;
+      width: 75px;
+      background-color: blue;
+    }
+
+
+
+.black {
+      height: 75px;
+      width: 75px;
+      background-color:blue;
+    }
