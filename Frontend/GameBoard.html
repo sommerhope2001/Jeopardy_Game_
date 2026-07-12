@@ -74,7 +74,45 @@
             <p class="score" id="score--1">0</p>
 
         </div>
+
+    <!--Create modal class-->
+    <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h3>Question</h3>
+        <p class="question">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        <p id="my-answer"></p>
+        <form>
+            <input type="text" id="answer" name="answer"><br>
+        </form>
+        </p>
+
+        <span>
+            <button id="submit-answer">Submit Answer</button>
+        </span>
     </div>
+
+    <div class = "correct hidden">
+        <button class="close-correct">&times;</button>
+        <h3>Correct!</h3>
+
+    </div>
+
+    <div class = "incorrect hidden">
+        <button class="close-incorrect">&times;</button>
+        <h3>Incorrect!</h3>
+    </div>
+    <!--End of modal class-->
+
+    </div>
+
+    <div class="overlay hidden"></div>
 
 
     <script src="GameBoard.js"></script>

@@ -76,12 +76,12 @@ app.post('/generate-quiz', upload.single('file'), async (req, res) => {
         if (!text.trim()) return res.status(400).json({ error: 'The uploaded file contains no readable text.' });
 
         // Detailed error tracking for OpenAI API call
-  try {
+        try {
             const completion = await openai.chat.completions.create({
                 model: "gpt-4o",
                 messages: [
                     { role: "system", content: "You are a teacher crafting exam prep tools. Analyze the document context to build comprehensive test questions." },
-                    { role: "user", content: `Generate exactly 25 unique questions where the answer is only ONE WORD. ONLY ONE WORD!!!\n\nContext:\n${text}` }
+                    { role: "user", content: `Generate EXACTLY 30 (Exactly 30, nothing more nothing less) unique questions where the answer is only ONE WORD. ONLY ONE WORD!!!\n\nContext:\n${text}` }
                 ],
                 response_format: {
                     type: "json_schema",
@@ -97,14 +97,9 @@ app.post('/generate-quiz', upload.single('file'), async (req, res) => {
                                         type: "object",
                                         properties: {
                                             question: { type: "string" },
-                                            options: {
-                                                type: "array",
-                                                items: { type: "string" },
-                                                description: "Must contain exactly 4 unique choices representing options A, B, C, and D"
-                                            },
-                                            correctAnswer: { type: "string", description: "Must match the exact text of the correct option from the options array." }
+                                            correctAnswer: { type: "string", description: "The one-word answer to the question." }
                                         },
-                                        required: ["question", "options", "correctAnswer"],
+                                        required: ["question", "correctAnswer"],
                                         additionalProperties: false
                                     }
                                 }

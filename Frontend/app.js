@@ -30,7 +30,7 @@ generateBtn.addEventListener('click', async () => {
     if (!selectedFile) return alert('Please upload a study guide first.');
 
     generateBtn.disabled = true;
-    generateBtn.textContent = 'Generating 25 Questions... (takes a few seconds)';
+    generateBtn.textContent = 'Generating 30 Questions... (takes a few seconds)';
 
     const formData = new FormData();
     formData.append('file', selectedFile);
@@ -53,7 +53,7 @@ generateBtn.addEventListener('click', async () => {
     } catch (error) {
         alert("Error: " + error.message);
         generateBtn.disabled = false;
-        generateBtn.textContent = 'Generate 25 questions where the answer is only one word. The answer cannot be a sentence. ONLY ONE WORD.';
+        generateBtn.textContent = 'Generate 30 questions where the answer is only one word. The answer cannot be a sentence. ONLY ONE WORD.';
     }
 });
 
